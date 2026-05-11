@@ -3,12 +3,12 @@ import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
-        BreakProblems.method4();
+        Scanner scan = new Scanner(System.in);
+        IfElseProblems.method1(scan);
     }
 }
 class IfElseProblems{
-    static void method1(){
-        Scanner scan = new Scanner(System.in);
+    static void method1(Scanner scan){
         int i = scan.nextInt();
         if(i>0){
             System.out.println("The number is positive");
@@ -20,14 +20,12 @@ class IfElseProblems{
             System.out.println("The number is negative");
         }
     }
-    static void method2(){
-        Scanner scan = new Scanner(System.in);
+    static void method2(Scanner scan){
         int i1 = scan.nextInt();
         int i2 = scan.nextInt();
         System.out.println(Math.max(i1,i2));
     }
-    static void method3(){
-        Scanner scan = new Scanner(System.in);
+    static void method3(Scanner scan){
         int i = scan.nextInt();
         switch (i){
             case 5:
@@ -47,8 +45,7 @@ class IfElseProblems{
                 System.out.println("Illegal number");
         }
     }
-    static void method4(){
-        Scanner scan = new Scanner(System.in);
+    static void method4(Scanner scan){
         int i = scan.nextInt();
         if(i>0){
         if(i%2==0){
@@ -61,8 +58,7 @@ class IfElseProblems{
         else
             System.out.println("Weird number");
     }
-    static void method5(){
-        Scanner scan = new Scanner(System.in);
+    static void method5(Scanner scan){
         int age = scan.nextInt();
         if(age<18){
             System.out.println("The discount is 25%");
@@ -74,8 +70,7 @@ class IfElseProblems{
             System.out.println("No discount");
         }
     }
-    static void method6(){
-        Scanner scan = new Scanner(System.in);
+    static void method6(Scanner scan){
         int grade = scan.nextInt();
         if(grade>89){
             System.out.println("Great");
@@ -94,8 +89,7 @@ class IfElseProblems{
     }
 }
 class SwitchProblems{
-    static void method1(){
-        Scanner scan = new Scanner(System.in);
+    static void method1(Scanner scan){
         int day = scan.nextInt();
         switch (day){
             case 1:
@@ -123,8 +117,7 @@ class SwitchProblems{
                 System.out.println("Illegal number");
         }
     }
-    static void method2(){
-        Scanner scan = new Scanner(System.in);
+    static void method2(Scanner scan){
         int day = scan.nextInt();
         switch (day){
             case 1:
@@ -142,8 +135,7 @@ class SwitchProblems{
                 System.out.println("Illegal number");
         }
     }
-    static void method3(){
-        Scanner scan = new Scanner(System.in);
+    static void method3(Scanner scan){
         int grade = scan.nextInt();
         if(grade>89){
             System.out.println("A");
@@ -163,8 +155,7 @@ class SwitchProblems{
         else
             System.out.println("Negative number");
     }
-    static void method4(){
-        Scanner scan = new Scanner(System.in);
+    static void method4(Scanner scan){
         String s = scan.nextLine();
         switch (s){
             case "stop":
@@ -183,8 +174,7 @@ class SwitchProblems{
                 System.out.println("Brrr");
         }
     }
-    static void method5(){
-        Scanner scan = new Scanner(System.in);
+    static void method5(Scanner scan){
         int i1 = scan.nextInt();
         String s = scan.next();
         int i2 = scan.nextInt();
@@ -219,26 +209,23 @@ class SwitchProblems{
             }
         }
     }
-    static void method2(){
-        Scanner scan = new Scanner(System.in);
+    static void method2(Scanner scan){
         int n = scan.nextInt();
-        int sum = n;
+        int sum = 0;
         for(int i = 1; i<n; i++){
             sum+=i;
         }
         System.out.println("Sum:" + sum);
     }
-    static void method3(){
-        Scanner scan = new Scanner(System.in);
+    static void method3(Scanner scan){
         int digit = scan.nextInt();
         for(int i = 1; i<11; i++){
             System.out.println(digit + " * " + i + " = " + digit*i);
         }
     }
-    static void method4(){
-        Scanner scan = new Scanner(System.in);
+    static void method4(Scanner scan){
         int digit = scan.nextInt();
-        boolean isPrime=false;
+        boolean isPrime=true;
         for(int i = 2; i<digit; i++){
             if(digit%i==0){
                 isPrime = false;
@@ -256,19 +243,17 @@ class SwitchProblems{
     }
     }
     class WhileProblems{
-    static void method1(){
-        Scanner scan = new Scanner(System.in);
+    static void method1(Scanner scan){
         int n = scan.nextInt();
-        int f = n;
+        int f = 1;
         int i = 1;
-        while(i<n){
+        while(i<=n){
             f*=i;
             i++;
         }
         System.out.println(f);
     }
-    static void method2(){
-        Scanner scan = new Scanner(System.in);
+    static void method2(Scanner scan){
         int n = scan.nextInt();
         scan.close();
         int i = 1;
@@ -281,8 +266,7 @@ class SwitchProblems{
         }
         System.out.println(n);
     }
-    static void method3(){
-        Scanner scan = new Scanner(System.in);
+    static void method3(Scanner scan){
         int n = scan.nextInt();
         int i = n;
         while(i>0){
@@ -292,16 +276,14 @@ class SwitchProblems{
     }
     }
     class DoWhileProblems{
-    static void method1(){
-        Scanner scan = new Scanner(System.in);
+    static void method1(Scanner scan){
         int digit;
         do{
             digit = scan.nextInt();
         }
         while(digit<=0);
     }
-    static void method2(){
-        Scanner scan = new Scanner(System.in);
+    static void method2(Scanner scan){
         String login = "admin";
         String password = "123";
         String login2, password2;
@@ -320,8 +302,7 @@ class SwitchProblems{
         }
         while(i<11);
     }
-    static void method4(){
-        Scanner scan = new Scanner(System.in);
+    static void method4(Scanner scan){
         String s;
         do{
             s = scan.next();
@@ -329,26 +310,23 @@ class SwitchProblems{
         }
         while(!s.equals("exit"));
     }
-    static void method5(){
-        Scanner scan = new Scanner(System.in);
+    static void method5(Scanner scan){
         int n = scan.nextInt();
-        int n2 = n;
         int result = 0;
         if(n>0){
             do{
                 if(n%10!=0){
                     result++;
-                    n2 = n2/10;
+                    n = n/10;
                 }
             }
-            while (n2>0);
+            while (n>0);
         }
         System.out.println(result);
     }
     }
     class BreakProblems{
-    static void method1(){
-        Scanner scan = new Scanner(System.in);
+    static void method1(Scanner scan){
         int input = 0;
         int sum = 0;
         while(true){
@@ -368,8 +346,7 @@ class SwitchProblems{
             System.out.println(i);
         }
     }
-    static void method3(){
-        Scanner scan = new Scanner(System.in);
+    static void method3(Scanner scan){
         int [] array = new int [4];
         int i = 0;
         int f;
@@ -386,8 +363,7 @@ class SwitchProblems{
             }
         }
     }
-    static void method4(){
-        Scanner scan = new Scanner(System.in);
+    static void method4(Scanner scan){
         String s;
         while(true){
             s = scan.next();
@@ -398,4 +374,5 @@ class SwitchProblems{
         }
     }
     }
+
 
